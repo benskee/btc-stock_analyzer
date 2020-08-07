@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block better %}
+<div class="col-md-6 text-center">
+    <h1>Price Calculator</h1>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <form action="/price" method="POST">
+        <div class="form-group">
+            <input type="text" name="stock" class="form-control" placeholder="Name of Stock">
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <input type="text" name="date_start" id="" class="form-control" placeholder="From 2019-05-03">
+            </div>
+            <div class="form-group">
+                <input type="text" name="date_end" id="" class="form-control" placeholder="To 2020-08-03">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn">
+                    <input type="checkbox" name="gbtc_box" id="" autocomplete="on">
+                    <p>Stock Perfomance in Bitcoin</p>
+                </label>
+                <label class="btn">
+                    <input type="checkbox" name="sats_box" id="" autocomplete="on">
+                    <p>Stock Perfomance in Dollars</p>
+                </label>
+                <label class="btn">
+                    <input type="checkbox" name="btc_box" id="" checked autocomplete="off">
+                    <p>BTC Price in Dollars</p>
+                </label>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary btn-block" value="Submit">
+    </form>
+</div>
+{% block image %}
+{% endblock image %}
+
+{% endblock %}
